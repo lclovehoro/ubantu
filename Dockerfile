@@ -1,4 +1,4 @@
-FROM boystar/ubantu:latest
+FROM ubuntu:latest
 
 RUN set -e \
     && apt-get update -y && apt-get upgrade -y \
