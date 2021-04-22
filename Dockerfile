@@ -1,7 +1,8 @@
 FROM boystar/ubantu:latest
 
 RUN set -e \
-    && apt-get install -y build-essential gcc \
+    && apt-get update && apt-get upgrade \
+    && apt-get install -y build-essential gcc build \
     && wget https://www.python.org/ftp/python/3.7.10/Python-3.7.10.tgz \
     && tar -xf Python-3.7.10.tgz \
     && rm -rf Python-3.7.10.tgz \
