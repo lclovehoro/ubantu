@@ -9,6 +9,7 @@ RUN set -e \
     && cd Python-3.7.10 \
     && ./configure --prefix=/usr/local/python3.7.10 \
     && make && make install \
+    && apt-get clean \
     && export $PATH:$HOME/bin:/usr/local/python3.7.10/bin \
     && rm -rf /usr/bin/{python,pip} \
     && ln -s /usr/local/python3.7.10/bin/python3.7 /usr/local/python \
