@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 RUN set -e \
     && apt-get update -y && apt-get upgrade -y \
-    && apt-get install -y build-essential gcc \
+    && apt-get install -y build-essential gcc wget \
     && wget https://www.python.org/ftp/python/3.7.10/Python-3.7.10.tgz \
     && tar -xf Python-3.7.10.tgz \
     && rm -rf Python-3.7.10.tgz \
