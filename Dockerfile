@@ -11,7 +11,7 @@ RUN set -e \
     && make && make install \
     && apt-get clean \
     && rm -rf /usr/bin/{python,pip} \
-    && ln -s /usr/local/python3.7.10/bin/python3.7 /usr/local/python \
-    && ln -s /usr/local/python3.7.10/bin/pip3 /usr/local/pip
+    && ln -s /usr/local/python3.7.10/bin/python3.7 /usr/bin/python \
+    && ln -s /usr/local/python3.7.10/bin/pip3 /usr/bin/pip
     
 CMD ["/bin/bash"]
