@@ -10,7 +10,6 @@ RUN set -e \
     && ./configure --prefix=/usr/local/python3.7.10 \
     && make && make install \
     && apt-get clean \
-    && export $PATH:$HOME/bin:/usr/local/python3.7.10/bin \
     && rm -rf /usr/bin/{python,pip} \
     && ln -s /usr/local/python3.7.10/bin/python3.7 /usr/local/python \
     && ln -s /usr/local/python3.7.10/bin/pip3 /usr/local/pip
