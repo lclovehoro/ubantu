@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
 RUN set -e \
-    && echo "deb http://security.ubuntu.com/ubuntu xenial-security main" >> /etc/apt/sources.list
+    && echo "deb http://security.ubuntu.com/ubuntu xenial-security main" >> /etc/apt/sources.list \
     && apt-get update -y && apt-get upgrade -y \
     && apt-get install -y build-essential gcc wget libssl-dev zlib1g-dev libbz2-dev  libreadline-dev libgssapi-krb5-2 libssl1.0.0  libicu55 libapt-pkg5.0 libicu* libcurl3-gnutls libicu66 libicu65 libicu63 libicu60 libicu57 \
     && wget https://www.python.org/ftp/python/3.7.10/Python-3.7.10.tgz \
